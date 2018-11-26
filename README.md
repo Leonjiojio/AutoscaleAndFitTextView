@@ -1,0 +1,3 @@
+# AutoscaleAndFitTextView
+能实现文本跟随手势移动自动调整大小和每行长度的TextView
+
