@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/detail_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dd_dimen_50dp"
+        >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="9"
+                android:singleLine="true"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/dd_dimen_20sp"
+                android:text="@string/app_name" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dd_dimen_10dp"
+        android:layout_marginLeft="@dimen/dd_dimen_28dp"
+        android:layout_marginRight="@dimen/dd_dimen_28dp"
+        android:layout_marginTop="@dimen/dd_dimen_10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="@dimen/img_width"
+            android:layout_height="@dimen/img_width"
+            android:layout_marginLeft="8dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:id="@+id/diy_temp_gif"
+                android:layout_width="@dimen/img_width"
+                android:layout_height="@dimen/img_width"
+                android:src="@mipmap/emojibg"
+                />
+
+            <com.leonjojo.autoscaleandfittextviewdemo.view.DragScaleView
+                android:id="@+id/diy_dg_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dd_dimen_50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:clickable="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/script_bg_color"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_marginTop="@dimen/dd_dimen_10dp"
+            android:layout_marginBottom="@dimen/dd_dimen_10dp"
+            android:id="@+id/diy_script_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dd_dimen_10dp"
+            android:layout_marginRight="@dimen/dd_dimen_10dp"
+            android:background="@drawable/editshape"
+            android:inputType="text"
+            android:text="@string/app_name" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dd_dimen_18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dd_dimen_18dp"
+        android:layout_marginStart="@dimen/dd_dimen_18dp"
+        android:layout_marginRight="@dimen/dd_dimen_18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="@dimen/dd_dimen_5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击换字" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_marginTop="@dimen/dd_dimen_5dp"
+        android:layout_marginLeft="@dimen/dd_dimen_18dp"
+        android:layout_marginStart="@dimen/dd_dimen_18dp"
+        android:layout_marginRight="@dimen/dd_dimen_18dp"
+        android:id="@+id/diy_lv_script"
+        android:divider="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

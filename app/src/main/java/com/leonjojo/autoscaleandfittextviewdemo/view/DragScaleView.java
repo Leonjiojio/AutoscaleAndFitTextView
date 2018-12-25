@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Cj
+ * @author LQ
  */
 public class DragScaleView extends View implements View.OnTouchListener {
     protected int parentViewWidth;
@@ -54,10 +54,10 @@ public class DragScaleView extends View implements View.OnTouchListener {
     private int imgHeight;
 
 
-    private String text = "你这么厉害咋不上天呢";
-    private int textSize = 50;
+    private String text = DragScaleView.class.getSimpleName();
+     final int TEXT_SIZE = 50;
 
-    private final float TEXTHEIGHTPOUND=1.1f;
+     final float TEXT_HEIGHT_POUND =1.1f;
     /**
      * 初始化获取屏幕宽高
      */
@@ -67,7 +67,7 @@ public class DragScaleView extends View implements View.OnTouchListener {
         rectImg = new Rect();
         rectArea = new Rect();
 
-        bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.diy_scaletag);
+        bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.icon_scale);
         imgWidth = bitmap.getWidth();
         imgHeight = bitmap.getHeight();
         intPaint();
@@ -80,14 +80,14 @@ public class DragScaleView extends View implements View.OnTouchListener {
     }
 
     private void intPaint() {
-        paint.setColor(Color.YELLOW);
+        paint.setColor(Color.BLUE);
         paint.setStrokeWidth(4.0f);
         paint.setStyle(Paint.Style.STROKE);
 
         paintText.setColor(Color.BLACK);
         paintText.setStrokeWidth(2);
         paintText.setStyle(Paint.Style.FILL);
-        paintText.setTextSize(textSize);
+        paintText.setTextSize(TEXT_SIZE);
     }
 
     public DragScaleView(Context context, AttributeSet attrs, int defStyle) {
@@ -238,8 +238,8 @@ public class DragScaleView extends View implements View.OnTouchListener {
         int rowCount;
         do {
             textMaxSize--;
-            lineCount=(int) Math.floor(width/(textMaxSize*TEXTHEIGHTPOUND));
-            rowCount=(int) Math.floor(height/(textMaxSize*TEXTHEIGHTPOUND));
+            lineCount=(int) Math.floor(width/(textMaxSize* TEXT_HEIGHT_POUND));
+            rowCount=(int) Math.floor(height/(textMaxSize* TEXT_HEIGHT_POUND));
         }while (lineCount*rowCount<text.length());
 
         //计算完后返回字符
@@ -256,6 +256,9 @@ public class DragScaleView extends View implements View.OnTouchListener {
     }
 
 
+    /*
+    只改变行数不改变大小
+     */
     private List<String> adjustTextLength(String text, Paint paint) throws Exception {
         float charwidth = paint.measureText(text, 0, 1);
         //每行的字符数量

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/diy_adpater_scriptwords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dd_dimen_3dp"
+        android:layout_marginLeft="@dimen/dd_dimen_5dp"
+        android:layout_marginRight="@dimen/dd_dimen_5dp"
+        android:padding="@dimen/dd_dimen_5dp"
+        android:text="帽子戴都带了"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/dd_dimen_14sp" />
+
+</RelativeLayout>

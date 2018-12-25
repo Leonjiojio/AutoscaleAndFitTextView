@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="gif_tag_bg_color">#99000000</color>
+    <color name="bg_yellow_color">#FBD727</color>
+    <color name="bg_yellow_color_2">#FDDD31</color>
+    <color name="divider_bg_color">#d4d6d7</color>
+    <color name="keywords_color">#78797A</color>
+    <color name="script_bg_color">#E1E2E4</color>
+    <color name="space_bg_color">#EAECED</color>
+    <color name="indicator_default_color">#42a1ef</color>
+    <color name="text_black">#333333</color>
+    <color name="black_color">#ff000000</color>
+    <color name="white_color">#ffffffff</color>
+    <color name="stroke_color">#c6c7c8</color>
 </resources>

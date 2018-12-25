@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AutoscaleAndFitTextViewDemo</string>
+    <string-array name="script_list">
+        <item>爷爷们给我点赞啊</item>
+        <item>别过来我投降</item>
+        <item>啊妈抱</item>
+        <item>我投降，这群套路太深</item>
+        <item>女王陛下，别杀我</item>
+        <item>强啊</item>
+        <item>来来来起来嗨</item>
+        <item>你有没有听过一种从天而降的掌法</item>
+    </string-array>
+
+
 </resources>
