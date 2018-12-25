@@ -28,7 +28,7 @@ public class AutoScaleFixActivity extends AppCompatActivity implements   View.On
     private EditText etScriptInput;
     private ListView lvScript;
     private ScriptAdapter scriptAdapter;
-    private AutoScaleAndFitTextView dragScaleView;
+    private AutoScaleAndFitTextView autoScaleFitTextView;
 
 
     //加载的资源相关
@@ -82,9 +82,9 @@ public class AutoScaleFixActivity extends AppCompatActivity implements   View.On
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (TextUtils.isEmpty(s)) {
-                    dragScaleView.clearText();
+                    autoScaleFitTextView.clearText();
                 } else {
-                    dragScaleView.setDisplayText(s.toString());
+                    autoScaleFitTextView.setDisplayText(s.toString());
                 }
             }
 
@@ -103,8 +103,8 @@ public class AutoScaleFixActivity extends AppCompatActivity implements   View.On
         ivTempGif = (ImageView) findViewById(R.id.diy_temp_gif);
         etScriptInput = (EditText) findViewById(R.id.diy_script_text);
         lvScript = (ListView) findViewById(R.id.diy_lv_script);
-        dragScaleView = (AutoScaleAndFitTextView) findViewById(R.id.diy_dg_view);
-        dragScaleView.setParentViewSize(ViewUtil.getViewWidth(ivTempGif), ViewUtil.getViewHeight(ivTempGif));
+        autoScaleFitTextView = (AutoScaleAndFitTextView) findViewById(R.id.diy_dg_view);
+        autoScaleFitTextView.setParentViewSize(ViewUtil.getViewWidth(ivTempGif), ViewUtil.getViewHeight(ivTempGif));
 
 
 
@@ -123,7 +123,7 @@ public class AutoScaleFixActivity extends AppCompatActivity implements   View.On
     }
 
     private void setgifText(String text) {
-        dragScaleView.setDisplayText(text);
+        autoScaleFitTextView.setDisplayText(text);
     }
 
     @Override
