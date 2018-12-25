@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.leonjojo.autoscaleandfittextviewdemo.Utils.ViewUtil;
-import com.leonjojo.autoscaleandfittextviewdemo.view.DragScaleView;
+import com.leonjojo.autoscaleandfittextviewdemo.view.AutoScaleAndFitTextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class AutoScaleFixActivity extends AppCompatActivity implements   View.On
     private EditText etScriptInput;
     private ListView lvScript;
     private ScriptAdapter scriptAdapter;
-    private DragScaleView dragScaleView;
+    private AutoScaleAndFitTextView dragScaleView;
 
 
     //加载的资源相关
@@ -103,7 +103,7 @@ public class AutoScaleFixActivity extends AppCompatActivity implements   View.On
         ivTempGif = (ImageView) findViewById(R.id.diy_temp_gif);
         etScriptInput = (EditText) findViewById(R.id.diy_script_text);
         lvScript = (ListView) findViewById(R.id.diy_lv_script);
-        dragScaleView = (DragScaleView) findViewById(R.id.diy_dg_view);
+        dragScaleView = (AutoScaleAndFitTextView) findViewById(R.id.diy_dg_view);
         dragScaleView.setParentViewSize(ViewUtil.getViewWidth(ivTempGif), ViewUtil.getViewHeight(ivTempGif));
 
 

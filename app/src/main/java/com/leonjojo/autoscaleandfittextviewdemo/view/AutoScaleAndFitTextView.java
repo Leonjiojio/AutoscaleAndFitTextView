@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * @author LQ
  */
-public class DragScaleView extends View implements View.OnTouchListener {
+public class AutoScaleAndFitTextView extends View implements View.OnTouchListener {
     protected int parentViewWidth;
     protected int parentViewHeight;
     protected int lastX;
@@ -45,7 +45,7 @@ public class DragScaleView extends View implements View.OnTouchListener {
     protected Paint paintText = new Paint();
 
 
-    private static final String TAG = DragScaleView.class.getSimpleName();
+    private static final String TAG = AutoScaleAndFitTextView.class.getSimpleName();
     //可拖拉的图片
     private Bitmap bitmap;
     Rect rectImg;
@@ -54,7 +54,7 @@ public class DragScaleView extends View implements View.OnTouchListener {
     private int imgHeight;
 
 
-    private String text = DragScaleView.class.getSimpleName();
+    private String text = AutoScaleAndFitTextView.class.getSimpleName();
      final int TEXT_SIZE = 50;
 
      final float TEXT_HEIGHT_POUND =1.1f;
@@ -90,19 +90,19 @@ public class DragScaleView extends View implements View.OnTouchListener {
         paintText.setTextSize(TEXT_SIZE);
     }
 
-    public DragScaleView(Context context, AttributeSet attrs, int defStyle) {
+    public AutoScaleAndFitTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setOnTouchListener(this);
         initScreenW_H();
     }
 
-    public DragScaleView(Context context, AttributeSet attrs) {
+    public AutoScaleAndFitTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setOnTouchListener(this);
         initScreenW_H();
     }
 
-    public DragScaleView(Context context) {
+    public AutoScaleAndFitTextView(Context context) {
         super(context);
         setOnTouchListener(this);
         initScreenW_H();
